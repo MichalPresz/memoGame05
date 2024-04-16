@@ -6,6 +6,8 @@ let turns = 0;
 
 document.querySelector(".turns").textContent = turns;
 
+//FETCH IMAGES FROM ARRAY IN DATA FOLDER
+
 fetch("./data/cards.json")
   .then((res) => res.json())
   .then((data) => {
@@ -13,6 +15,8 @@ fetch("./data/cards.json")
     shuffleCards();
     generateCards();
   });
+
+//SHUFFLE CARDS FUNCTION
 
 function shuffleCards() {
   let currentIndex = cards.length,
@@ -26,6 +30,8 @@ function shuffleCards() {
     cards[randomIndex] = temporaryValue;
   }
 }
+
+//GENERATE CARDS FUNCTION
 
 function generateCards() {
   for (let card of cards) {
@@ -104,6 +110,8 @@ function restart() {
   gridContainer.innerHTML = "";
   generateCards();
 }
+
+//RESTART BUTTON
 
 const button = document.getElementById("restart-button");
 button.addEventListener("click", restart);
