@@ -1,5 +1,4 @@
 * {
-  background-image: url(https://images.pexels.com/photos/1542495/pexels-photo-1542495.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2git);
   padding: 0px;
   margin: 0px;
 }
@@ -11,6 +10,7 @@ body {
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
+  background-image: url(https://images.pexels.com/photos/1542495/pexels-photo-1542495.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2git);
 }
 
 p {
@@ -21,6 +21,7 @@ p {
   padding: 10px 15px;
   font-size: 24px;
   background-color: white;
+
 }
 
 .grid-container {
