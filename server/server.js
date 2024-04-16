@@ -15,12 +15,12 @@ app.get("/", function (request, response) {
 });
 
 // POST for submitting user and time
-app.post("/game/result", function (request, response) {
-  const { username, time } = request.body;
+app.post("/", function (request, response) {
+  const { username, turns } = request.body;
   const insertStatement = db.prepare(
-    "INSERT INTO game_results (username,time) VALUES (?,?)"
+    "INSERT INTO game_results (username,turns) VALUES (?,?)"
   );
-  insertStatement.run(username, time);
+  insertStatement.run(username, turns);
   response.send("game result submitted succesfully");
 });
 
