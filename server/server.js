@@ -14,7 +14,7 @@ app.get("/", function (request, response) {
   response.json(users);
 });
 
-// POST for submitting user and time
+// POST for submitting user and turns
 app.post("/", function (request, response) {
   const { username, turns } = request.body;
   const insertStatement = db.prepare(

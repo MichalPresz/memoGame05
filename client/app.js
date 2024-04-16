@@ -1,4 +1,5 @@
 const gridContainer = document.querySelector(".grid-container");
+const form = document.getElementById(gameForm);
 let cards = [];
 let firstCard, secondCard;
 let lockBoard = false;
@@ -113,5 +114,19 @@ function restart() {
 
 //RESTART BUTTON
 
+//submission handling
+async function handleSubmit(event) {
+  event.preventDefault();
+  const username = event.target.username.value;
+  console.log("username:$(username), turns:$(turns)");
+  fetch("", {
+    method: "POST",
+    body: JSON.stringify({ username, turns }),
+    headers: { "Content-Type": "application/json" },
+  });
+  form.reset();
+}
+
 const button = document.getElementById("restart-button");
 button.addEventListener("click", restart);
+form.addEventListener("submit", handleSubmit);
