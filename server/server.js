@@ -18,7 +18,7 @@ app.get("/", function (request, response) {
 app.post("/game/result", function (request, response) {
   const { username, time } = request.body;
   const insertStatement = db.prepare(
-    "INSERT INTO game_results (username,time) VALUES (?)(?)"
+    "INSERT INTO game_results (username,time) VALUES (?,?)"
   );
   insertStatement.run(username, time);
   response.send("game result submitted succesfully");
