@@ -1,6 +1,7 @@
 * {
   padding: 0px;
   margin: 0px;
+
 }
 
 body {
@@ -10,19 +11,20 @@ body {
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  background-image: url(https://images.pexels.com/photos/1542495/pexels-photo-1542495.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2git);
 }
-
+body {
+  background-image: url(https://images.pexels.com/photos/1542495/pexels-photo-1542495.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2git);
+  background-size: cover;
+}
 p {
   font-size: 24px;
-  color:blue;
+  color: rgb(230, 200, 170);
 }
 
 .actions button {
   padding: 10px 15px;
   font-size: 24px;
   background-color: white;
-
 }
 
 .grid-container {
