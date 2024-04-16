@@ -130,7 +130,7 @@ const images = [
     backAlt: "card",
   },
 ];
-
+const restartBtn = document.getElementById("restartBtn");
 //SHUFFLE ARRAY ON RELOAD
 
 function shuffleArray(array) {
@@ -193,10 +193,6 @@ cards.forEach(function (card) {
 
 const timer = document.getElementById("game-timer");
 
-let minutes = 0;
-let seconds = 0;
-let stopstatus = 0;
-
 startBtn.addEventListener("click", function () {
   if (stopstatus !== 0) {
     clearInterval(stopstatus);
@@ -212,3 +208,10 @@ startBtn.addEventListener("click", function () {
     timer.innerHTML = ` ${m} : ${s}`;
   }, 1000);
 });
+
+
+restartBtn.addEventListener("click", restartGame);
+function restartGame() {
+  minutes = 0;
+  seconds = 0;
+}
