@@ -1,4 +1,5 @@
 const gridContainer = document.querySelector(".grid-container");
+const form = document.getElementById("gameForm");
 let cards = [];
 let firstCard, secondCard;
 let lockBoard = false;
@@ -115,15 +116,28 @@ function restart() {
 async function handleSubmit(event) {
   event.preventDefault();
   const username = event.target.username.value;
-  console.log("username:$(username), turns:$(turns)");
-  fetch("", {
+  console.log(`username:${username}, turns:${turns}`);
+  fetch("https://memogame05.onrender.com", {
     method: "POST",
     body: JSON.stringify({ username, turns }),
     headers: { "Content-Type": "application/json" },
   });
   form.reset();
 }
+//fetch username and turns
+async function fetchGameResults() {
+  const response = await fetch("https://memogame05.onrender.com");
+  const results = await response.json();
+  const resultList = document.getElementById("messageList");
+  resultList.innerHTML = "";
+  results.forEach((result) => {
+    const resultItem = document.createElement("li");
+    resultItem.textContent = `username: ${result.username}, Turns:${result.turns}`;
+    resultList.appendChild(resultItem);
+  });
+}
 //RESTART BUTTON
 
 const button = document.getElementById("restart-button");
 button.addEventListener("click", restart);
+window.addEventListener("load", fetchGameResults);
