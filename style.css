@@ -6,6 +6,57 @@
 body {
   height: 100vh;
   width: 100vw;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100vw;
+  height: 100vh;
+}
+
+.about-sections {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.about-game,
+.about-form {
+  background-color: lightblue;
+  height: 30vh;
+  width: 15vw;
+  padding: 5vh 3vw;
+}
+
+.about-form {
+  height: 17vh;
+}
+
+.about-game h1,
+h2,
+h3 {
+  text-align: center;
+}
+
+.about-game h1,
+h3 {
+  font-size: 48px;
+  margin-bottom: 3vh;
+}
+
+.about-game h2 {
+  font-size: 32px;
+  margin-bottom: 3vh;
+}
+
+.about-game ol {
+  font-size: 24px;
+}
+
+.game-container {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -22,9 +73,17 @@ p {
   background-color: white;
 }
 
+.actions button:hover {
+  cursor: pointer;
+}
+
+.actions button:active {
+  transform: translateY(5px);
+}
+
 .grid-container {
   display: flex;
-  height: 70vh;
+  height: 80vh;
   width: 50vw;
   flex-wrap: wrap;
   justify-content: center;
@@ -32,12 +91,16 @@ p {
 }
 
 .card {
-  height: 15vh;
+  height: 18vh;
   width: 10vw;
   margin: 10px;
   position: relative;
   transform-style: preserve-3d;
   transition: all 0.5s ease-in-out;
+}
+
+.card:hover {
+  cursor: pointer;
 }
 
 .card.flipped {
