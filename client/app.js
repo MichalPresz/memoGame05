@@ -127,6 +127,8 @@ async function handleSubmit(event) {
   form.reset();
 }
 
+//fetch
+
 const button = document.getElementById("restart-button");
 button.addEventListener("click", restart);
 form.addEventListener("submit", handleSubmit);
