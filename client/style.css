@@ -137,3 +137,8 @@ p {
   background-size: cover;
   backface-visibility: hidden;
 }
+
+.back-image {
+  height: 100%;
+  width: 100%;
+}
