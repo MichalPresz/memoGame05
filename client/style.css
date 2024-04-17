@@ -3,7 +3,7 @@
   margin: 0px;
 }
 
-@media(min-width: 800px){
+
 
 .body {
     height: 100vh;
@@ -11,7 +11,7 @@
     background-image: url(https://images.pexels.com/photos/1542495/pexels-photo-1542495.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2git);
     background-size: cover;
   }
-}
+
   .hero {
     display: flex;
     align-items: center;
@@ -19,7 +19,7 @@
     width: 100vw;
     height: 100vh;
   }
-
+  @media(min-width: 800px){
   .about-sections {
     height: 50vh;
     display: flex;
