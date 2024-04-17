@@ -203,17 +203,18 @@ async function handleSubmit(event) {
   event.preventDefault();
   const username = event.target.username.value;
   console.log(`username:${username}, turns:${turns}`);
-  fetch("https://memogame05.onrender.com", {
+  await fetch("https://memogame05.onrender.com/", {
     method: "POST",
     body: JSON.stringify({ username, turns }),
     headers: { "Content-Type": "application/json" },
   });
-  form.reset();
+  event.target.reset();
+  fetchGameResults();
 }
 
 //fetch username and turns
 async function fetchGameResults() {
-  const response = await fetch("https://memogame05.onrender.com");
+  const response = await fetch("https://memogame05.onrender.com/");
   const results = await response.json();
   const resultList = document.getElementById("messageList");
   resultList.innerHTML = "";
