@@ -5,17 +5,92 @@ let firstCard, secondCard;
 let lockBoard = false;
 let turns = 0;
 
+//ARRAY OF  CAT IMAGES
+
+cards = [
+  {
+    image:
+      "https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?q=80&w=2043&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    name: "cat",
+  },
+  {
+    image:
+      "https://images.unsplash.com/photo-1596854407944-bf87f6fdd49e?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    name: "cat2",
+  },
+  {
+    image:
+      "https://images.unsplash.com/photo-1574158622682-e40e69881006?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    name: "cat3",
+  },
+  {
+    image:
+      "https://images.unsplash.com/photo-1596854273338-cbf078ec7071?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    name: "cat4",
+  },
+  {
+    image:
+      "https://images.unsplash.com/photo-1516139008210-96e45dccd83b?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    name: "cat5",
+  },
+  {
+    image:
+      "https://images.unsplash.com/photo-1580914960731-b824d9730556?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    name: "cat6",
+  },
+  {
+    image:
+      "https://images.unsplash.com/photo-1606225457115-9b0de873c5db?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    name: "cat7",
+  },
+  {
+    image:
+      "https://images.unsplash.com/photo-1605450648855-63f9161b7ef7?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    name: "cat8",
+  },
+  {
+    image:
+      "https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?q=80&w=2043&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    name: "cat",
+  },
+  {
+    image:
+      "https://images.unsplash.com/photo-1596854407944-bf87f6fdd49e?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    name: "cat2",
+  },
+  {
+    image:
+      "https://images.unsplash.com/photo-1574158622682-e40e69881006?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    name: "cat3",
+  },
+  {
+    image:
+      "https://images.unsplash.com/photo-1596854273338-cbf078ec7071?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    name: "cat4",
+  },
+  {
+    image:
+      "https://images.unsplash.com/photo-1516139008210-96e45dccd83b?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    name: "cat5",
+  },
+  {
+    image:
+      "https://images.unsplash.com/photo-1580914960731-b824d9730556?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    name: "cat6",
+  },
+  {
+    image:
+      "https://images.unsplash.com/photo-1606225457115-9b0de873c5db?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    name: "cat7",
+  },
+  {
+    image:
+      "https://images.unsplash.com/photo-1605450648855-63f9161b7ef7?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    name: "cat8",
+  },
+];
+
 document.querySelector(".turns").textContent = turns;
-
-//FETCH IMAGES FROM ARRAY IN DATA FOLDER
-
-fetch("./data/cards.json")
-  .then((res) => res.json())
-  .then((data) => {
-    cards = [...data, ...data];
-    shuffleCards();
-    generateCards();
-  });
 
 //SHUFFLE CARDS FUNCTION
 
@@ -41,7 +116,7 @@ function generateCards() {
     cardElement.setAttribute("data-name", card.name);
     cardElement.innerHTML = `
     <div class="front">
-      <img class="front-image" src=${card.image} />
+      <img class="front-image" src=${card.image} alt="Cristiano Ronaldo"/>
     </div>
     <div class="back"></div>
   `;
@@ -112,7 +187,18 @@ function restart() {
   generateCards();
 }
 
-//submission handling
+//RESTART BUTTON
+
+const button = document.getElementById("restart-button");
+button.addEventListener("click", restart);
+
+//RUN FUNCTIONS
+
+shuffleCards();
+generateCards();
+
+//SUBMISSION HANDLING
+
 async function handleSubmit(event) {
   event.preventDefault();
   const username = event.target.username.value;
@@ -124,20 +210,4 @@ async function handleSubmit(event) {
   });
   form.reset();
 }
-//fetch username and turns
-async function fetchGameResults() {
-  const response = await fetch("https://memogame05.onrender.com");
-  const results = await response.json();
-  const resultList = document.getElementById("messageList");
-  resultList.innerHTML = "";
-  results.forEach((result) => {
-    const resultItem = document.createElement("li");
-    resultItem.textContent = `username: ${result.username}, Turns:${result.turns}`;
-    resultList.appendChild(resultItem);
-  });
-}
-//RESTART BUTTON
 
-const button = document.getElementById("restart-button");
-button.addEventListener("click", restart);
-window.addEventListener("load", fetchGameResults);
