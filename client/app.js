@@ -211,3 +211,17 @@ async function handleSubmit(event) {
   form.reset();
 }
 
+//fetch username and turns
+async function fetchGameResults() {
+  const response = await fetch("https://memogame05.onrender.com");
+  const results = await response.json();
+  const resultList = document.getElementById("messageList");
+  resultList.innerHTML = "";
+  results.forEach((result) => {
+    const resultItem = document.createElement("li");
+    resultItem.textContent = `username: ${result.username}, Turns:${result.turns}`;
+    resultList.appendChild(resultItem);
+  });
+}
+form.addEventListener("submit", handleSubmit);
+window.addEventListener("load", fetchGameResults);
