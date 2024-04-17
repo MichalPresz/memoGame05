@@ -8,14 +8,34 @@
     <title>Memory Game</title>
   </head>
   <body>
-    <form id="gameForm">
-      <input type="text" id="username" placeholder="username" />
+    <div class="hero">
+      <div class="about-sections">
+    <section class="about-game">
+      <h1>Memory Game</h1>
+      <h2>How to Play</h2>
+      <ol>
+        <li>Match all pairs of cards on the board.</li>
+        <li>Click on two cards to reveal what's underneath. If they match, they stay face-up. If not, they flip back over.</li>
+        <li>Remember: Concentrate and remember the positions of the cards to make successful matches.</li>
+      </ol>
+    </section>
+    
+    <section class="about-form">
+      <h3>Share your Score</h3>
+      <form id="gameForm">
+        <input type="text" id="username" placeholder="username" />
+        <button id="submit-button">Submit</button>
+      </form>
+    </section>
+  </div>
+
+    <div class="game-container">
     <div class="grid-container"></div>
     <p>Turns: <span class="turns"><span></p>
       <div class="actions">
         <button id="restart-button">Restart</button>
-        <button id="submit-button">Submit</button>
       </div>
-      </form>
+    </div>
+  </div>
   </body>
 </html>
