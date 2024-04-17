@@ -3,137 +3,140 @@
   margin: 0px;
 }
 
-body {
-  height: 100vh;
-  width: 100vw;
-  background-image: url(https://images.pexels.com/photos/1542495/pexels-photo-1542495.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2git);
-  background-size: cover;
+@media(min-width: 800px){
+
+.body {
+    height: 100vh;
+    width: 100vw;
+    background-image: url(https://images.pexels.com/photos/1542495/pexels-photo-1542495.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2git);
+    background-size: cover;
+  }
+}
+  .hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .about-sections {
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .about-game,
+  .about-form {
+    background-color: lightblue;
+    height: 50vh;
+    width: 15vw;
+    padding: 5vh 3vw;
+  }
+
+  .about-form {
+    height: 25vh;
+  }
+
+  .about-game h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+
+  .about-game h1,
+  h3 {
+    font-size: 48px;
+    margin-bottom: 3vh;
+  }
+
+  .about-game h2 {
+    font-size: 32px;
+    margin-bottom: 3vh;
+  }
+
+  .about-game ol {
+    font-size: 24px;
+  }
+
+  .game-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  
 }
 
-.hero {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  width: 100vw;
-  height: 100vh;
-}
+  p {
+    font-size: 24px;
+  }
 
-.about-sections {
-  height: 80vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-}
+  .actions button {
+    padding: 10px 15px;
+    font-size: 24px;
+    background-color: white;
+  }
 
-.about-game,
-.about-form {
-  background-color: lightblue;
-  height: 30vh;
-  width: 15vw;
-  padding: 5vh 3vw;
-}
+  .actions button:hover {
+    cursor: pointer;
+  }
 
-.about-form {
-  height: 17vh;
-}
+  .actions button:active {
+    transform: translateY(5px);
+  }
 
-.about-game h1,
-h2,
-h3 {
-  text-align: center;
-}
+  .grid-container {
+    display: flex;
+    height: 80vh;
+    width: 50vw;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
 
-.about-game h1,
-h3 {
-  font-size: 48px;
-  margin-bottom: 3vh;
-}
+  .card {
+    height: 18vh;
+    width: 10vw;
+    margin: 10px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: all 0.5s ease-in-out;
+  }
 
-.about-game h2 {
-  font-size: 32px;
-  margin-bottom: 3vh;
-}
+  .card:hover {
+    cursor: pointer;
+  }
 
-.about-game ol {
-  font-size: 24px;
-}
+  .card.flipped {
+    transform: rotateY(180deg);
+  }
 
-.game-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-}
+  .front-image {
+    width: 100%;
+    height: 100%;
+  }
 
-p {
-  font-size: 24px;
-}
+  .front,
+  .back {
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+  }
 
-.actions button {
-  padding: 10px 15px;
-  font-size: 24px;
-  background-color: white;
-}
+  .card .front {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotateY(180deg);
+  }
 
-.actions button:hover {
-  cursor: pointer;
-}
-
-.actions button:active {
-  transform: translateY(5px);
-}
-
-.grid-container {
-  display: flex;
-  height: 80vh;
-  width: 50vw;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-}
-
-.card {
-  height: 18vh;
-  width: 10vw;
-  margin: 10px;
-  position: relative;
-  transform-style: preserve-3d;
-  transition: all 0.5s ease-in-out;
-}
-
-.card:hover {
-  cursor: pointer;
-}
-
-.card.flipped {
-  transform: rotateY(180deg);
-}
-
-.front-image {
-  width: 100%;
-  height: 100%;
-}
-
-.front,
-.back {
-  backface-visibility: hidden;
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-}
-
-.card .front {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transform: rotateY(180deg);
-}
-
-.card .back {
-  background-image: url("https://img.a.transfermarkt.technology/portrait/big/8198-1694609670.jpg?lm=1");
-  background-position: center;
-  background-size: cover;
-  backface-visibility: hidden;
-}
+  .card .back {
+    background-image: url("https://img.a.transfermarkt.technology/portrait/big/8198-1694609670.jpg?lm=1");
+    background-position: center;
+    background-size: cover;
+    backface-visibility: hidden;
+  }
