@@ -1,4 +1,5 @@
 const gridContainer = document.querySelector(".grid-container");
+const form = document.getElementById("gameForm");
 let cards = [];
 let firstCard, secondCard;
 let lockBoard = false;
@@ -201,11 +202,12 @@ generateCards();
 async function handleSubmit(event) {
   event.preventDefault();
   const username = event.target.username.value;
-  console.log("username:$(username), turns:$(turns)");
-  fetch("", {
+  console.log(`username:${username}, turns:${turns}`);
+  fetch("https://memogame05.onrender.com", {
     method: "POST",
     body: JSON.stringify({ username, turns }),
     headers: { "Content-Type": "application/json" },
   });
   form.reset();
 }
+
