@@ -166,37 +166,6 @@ p {
 /* MEDIA QUERIES */
 
 /* Media query for screens smaller than 480px (smaller mobile phones) */
-@media (max-width: 400px) {
-  .grid-container {
-    grid-template-columns: repeat(1, 1fr);
-    .grid-container {
-      width: 50px;
-      max-width: 200px;
-      height: auto;
-    }
-
-    .grid-container {
-      grid-template-columns: repeat(2, 1fr);
-    }
-
-    .card {
-      width: 50px;
-      height: 50px;
-    }
-  }
-}
-@media (max-width: 400px) {
-  .body {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    height: 100vh;
-    
-.about-sections {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-}
 
 .about-game,
 .about-form {
@@ -230,41 +199,43 @@ p {
   margin: 5px 0px;
   text-align: center;
 }
-
-.game-container p {
-  background-color: white;
+@media (max-width: 600px) {
+  .game-container p {
+    background-color: white;
+  }
 }
-
 /* MEMORY GAME */
-
-.game-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
+@media (max-width: 600px) {
+  .game-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
 }
-
-.grid-container {
-  display: flex;
-  height: 80vh;
-  width: 40vw;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
+@media (max-width: 600px) {
+  .grid-container {
+    display: flex;
+    height: 80vh;
+    width: 40vw;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 /* CARDS */
-
-.card {
-  height: 16vh;
-  width: 8vw;
-  margin: 10px;
-  position: relative;
-  transform-style: preserve-3d;
-  transition: all 0.5s ease-in-out;
-  border: 2px solid white;
+@media (max-width: 600px) {
+  .card {
+    height: 16vh;
+    width: 8vw;
+    margin: 10px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: all 0.5s ease-in-out;
+    border: 2px solid white;
+  }
 }
-
 .card:hover {
   cursor: pointer;
 }
@@ -287,11 +258,12 @@ p {
   height: 100%;
   width: 100%;
 }
+@media (max-width: 600px) {
+}
 
 .card .front {
   transform: rotateY(180deg);
 }
-
 .card .back {
   background-image: url(./assets/ronaldo.webp);
   background-position: center;
@@ -321,22 +293,21 @@ p {
 }
 
 /* FORM */
-
-#gameForm {
-  display: flex;
-  justify-content: space-around;
-  margin-top: 20px;
+@media (max-width: 600px) {
+  #gameForm {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+  }
 }
-
 /* SUBMISSIONS */
+@media (max-width: 600px) {
+  .submissions {
+    background-color: white;
+    margin-top: 20px;
+  }
 
-.submissions {
-  background-color: white;
-  margin-top: 20px;
-}
-
-#username {
-  padding-left: 10px;
-}
+  #username {
+    padding-left: 10px;
   }
 }
