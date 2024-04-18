@@ -168,175 +168,183 @@ p {
 /* Media query for screens smaller than 480px (smaller mobile phones) */
 @media (max-width: 400px) {
   .grid-container {
-    grid-template-columns: repeat(1, 1fr);
-    .grid-container {
-      width: 50px;
-      max-width: 200px;
-      height: auto;
-    }
+    width: 100px;
+    max-width: none;
+    height: auto;
+    justify-content: center;
+  }
 
-    .grid-container {
-      grid-template-columns: repeat(2, 1fr);
-    }
-
-    .card {
-      width: 50px;
-      height: 50px;
-    }
+  .card {
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+  }
+  body {
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .about-sections {
+    width: 80vw;
+  }
+  .aboutgame,
+  .about-form {
+    width: 80vw;
+    padding: 5vh 3vw;
   }
 }
+
 @media (max-width: 400px) {
   .body {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     height: 100vh;
-    
-.about-sections {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-}
 
-.about-game,
-.about-form {
-  background-color: hsla(78, 71%, 76%, 1);
-  width: 15vw;
-  padding: 5vh 3vw;
-}
+    .about-sections {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+    }
 
-/* TEXT */
+    .about-game,
+    .about-form {
+      background-color: hsla(78, 71%, 76%, 1);
+      width: 15vw;
+      padding: 5vh 3vw;
+    }
 
-h1,
-h2,
-h3 {
-  text-align: center;
-}
+    /* TEXT */
 
-h1,
-h3 {
-  font-size: 40px;
-  margin-bottom: 3vh;
-}
+    h1,
+    h2,
+    h3 {
+      text-align: center;
+    }
 
-h2 {
-  font-size: 24px;
-  margin-bottom: 3vh;
-}
+    h1,
+    h3 {
+      font-size: 40px;
+      margin-bottom: 3vh;
+    }
 
-p {
-  font-size: 24px;
-  padding: 6px 10px;
-  margin: 5px 0px;
-  text-align: center;
-}
+    h2 {
+      font-size: 24px;
+      margin-bottom: 3vh;
+    }
 
-.game-container p {
-  background-color: white;
-}
+    p {
+      font-size: 24px;
+      padding: 6px 10px;
+      margin: 5px 0px;
+      text-align: center;
+    }
 
-/* MEMORY GAME */
+    .game-container p {
+      background-color: white;
+    }
 
-.game-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-}
+    /* MEMORY GAME */
 
-.grid-container {
-  display: flex;
-  height: 80vh;
-  width: 40vw;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-}
+    .game-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+    }
 
-/* CARDS */
+    .grid-container {
+      display: flex;
+      height: 80vh;
+      width: 40vw;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+    }
 
-.card {
-  height: 16vh;
-  width: 8vw;
-  margin: 10px;
-  position: relative;
-  transform-style: preserve-3d;
-  transition: all 0.5s ease-in-out;
-  border: 2px solid white;
-}
+    /* CARDS */
 
-.card:hover {
-  cursor: pointer;
-}
+    .card {
+      height: 16vh;
+      width: 8vw;
+      margin: 10px;
+      position: relative;
+      transform-style: preserve-3d;
+      transition: all 0.5s ease-in-out;
+      border: 2px solid white;
+    }
 
-.card.flipped {
-  transform: rotateY(180deg);
-}
+    .card:hover {
+      cursor: pointer;
+    }
 
-.front-image {
-  width: 100%;
-  height: 100%;
-}
+    .card.flipped {
+      transform: rotateY(180deg);
+    }
 
-.front,
-.back {
-  backface-visibility: hidden;
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-}
+    .front-image {
+      width: 100%;
+      height: 100%;
+    }
 
-.card .front {
-  transform: rotateY(180deg);
-}
+    .front,
+    .back {
+      backface-visibility: hidden;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+    }
 
-.card .back {
-  background-image: url(./assets/ronaldo.webp);
-  background-position: center;
-  background-size: cover;
-  backface-visibility: hidden;
-}
+    .card .front {
+      transform: rotateY(180deg);
+    }
 
-/* RESTART BUTTON */
+    .card .back {
+      background-image: url(./assets/ronaldo.webp);
+      background-position: center;
+      background-size: cover;
+      backface-visibility: hidden;
+    }
 
-#restart-button,
-#submit-button {
-  padding: 10px 15px;
-  background-color: white;
-  border: none;
-  margin-top: 5px;
-  border: 2px solid black;
-}
+    /* RESTART BUTTON */
 
-#restart-button:hover,
-#submit-button:hover {
-  cursor: pointer;
-}
+    #restart-button,
+    #submit-button {
+      padding: 10px 15px;
+      background-color: white;
+      border: none;
+      margin-top: 5px;
+      border: 2px solid black;
+    }
 
-#restart-button:active,
-#submit-button:active {
-  transform: translateY(5px);
-}
+    #restart-button:hover,
+    #submit-button:hover {
+      cursor: pointer;
+    }
 
-/* FORM */
+    #restart-button:active,
+    #submit-button:active {
+      transform: translateY(5px);
+    }
 
-#gameForm {
-  display: flex;
-  justify-content: space-around;
-  margin-top: 20px;
-}
+    /* FORM */
 
-/* SUBMISSIONS */
+    #gameForm {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 20px;
+    }
 
-.submissions {
-  background-color: white;
-  margin-top: 20px;
-}
+    /* SUBMISSIONS */
 
-#username {
-  padding-left: 10px;
-}
+    .submissions {
+      background-color: white;
+      margin-top: 20px;
+    }
+
+    #username {
+      padding-left: 10px;
+    }
   }
 }
