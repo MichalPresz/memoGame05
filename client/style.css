@@ -9,7 +9,7 @@ body {
   align-items: center;
   justify-content: space-evenly;
   height: 100vh;
-  background-image: url(./assets/rainbow-background.jpeg);
+  background-image: url(./assets/rainbow-background.webp);
   background-size: cover;
   background-repeat: no-repeat;
 }
