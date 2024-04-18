@@ -12,3 +12,4 @@ const insertStatus = db.prepare(`
 INSERT INTO users (username, turns) VALUES
 (?, ?)
 `);
+insertStatus.run("username", "turns");
