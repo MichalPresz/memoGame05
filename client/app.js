@@ -5,87 +5,71 @@ let firstCard, secondCard;
 let lockBoard = false;
 let turns = 0;
 
-//ARRAY OF  CAT IMAGES
+//ARRAY OF CAT IMAGES
 
 cards = [
   {
-    image:
-      "https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?q=80&w=2043&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    image: "./assets/cat1.avif",
     name: "cat",
   },
   {
-    image:
-      "https://images.unsplash.com/photo-1596854407944-bf87f6fdd49e?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    image: "./assets/cat2.avif",
     name: "cat2",
   },
   {
-    image:
-      "https://images.unsplash.com/photo-1574158622682-e40e69881006?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    image: "./assets/cat3.avif",
     name: "cat3",
   },
   {
-    image:
-      "https://images.unsplash.com/photo-1596854273338-cbf078ec7071?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    image: "./assets/cat4.avif",
     name: "cat4",
   },
   {
-    image:
-      "https://images.unsplash.com/photo-1516139008210-96e45dccd83b?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    image: "./assets/cat5.avif",
     name: "cat5",
   },
   {
-    image:
-      "https://images.unsplash.com/photo-1580914960731-b824d9730556?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    image: "./assets/cat6.avif",
     name: "cat6",
   },
   {
-    image:
-      "https://images.unsplash.com/photo-1606225457115-9b0de873c5db?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    image: "./assets/cat7.avif",
     name: "cat7",
   },
   {
-    image:
-      "https://images.unsplash.com/photo-1605450648855-63f9161b7ef7?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    image: "./assets/cat8.avif",
     name: "cat8",
   },
   {
-    image:
-      "https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?q=80&w=2043&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    image: "./assets/cat1.avif",
     name: "cat",
   },
   {
-    image:
-      "https://images.unsplash.com/photo-1596854407944-bf87f6fdd49e?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    image: "./assets/cat2.avif",
     name: "cat2",
   },
   {
-    image:
-      "https://images.unsplash.com/photo-1574158622682-e40e69881006?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    image: "./assets/cat3.avif",
     name: "cat3",
   },
   {
-    image:
-      "https://images.unsplash.com/photo-1596854273338-cbf078ec7071?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    image: "./assets/cat4.avif",
     name: "cat4",
   },
   {
-    image:
-      "https://images.unsplash.com/photo-1516139008210-96e45dccd83b?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    image: "./assets/cat5.avif",
     name: "cat5",
   },
   {
-    image:
-      "https://images.unsplash.com/photo-1580914960731-b824d9730556?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    image: "./assets/cat6.avif",
     name: "cat6",
   },
   {
-    image:
-      "https://images.unsplash.com/photo-1606225457115-9b0de873c5db?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    image: "./assets/cat7.avif",
     name: "cat7",
   },
   {
-    image:
-      "https://images.unsplash.com/photo-1605450648855-63f9161b7ef7?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    image: "./assets/cat8.avif",
     name: "cat8",
   },
 ];
@@ -212,7 +196,7 @@ async function handleSubmit(event) {
   fetchGameResults();
 }
 
-//fetch username and turns
+//FETCH USERNAME AND TURNS
 async function fetchGameResults() {
   const response = await fetch("https://memogame05.onrender.com/");
   const results = await response.json();
