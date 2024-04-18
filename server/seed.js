@@ -7,3 +7,10 @@ db.exec(`CREATE TABLE IF NOT EXISTS users(
     turns INTEGER
 )
 `);
+
+const insertStatus = db.prepare(`
+INSERT INTO users (username, turns) VALUES
+(?, ?)
+`);
+
+insertStatus.run("Lucy", "21");
