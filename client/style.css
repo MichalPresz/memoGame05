@@ -212,7 +212,27 @@ p {
 
 /* DESKTOP*/
 
-@media all and (min-width: 801px) and (max-width: 1520px) {
+@media (min-width: 801px) and (max-width: 1024px) {
+  h1,
+  h2,
+  h3 {
+    font-size: 18px;
+  }
+  p {
+    font-size: 12px;
+  }
+  .grid-container {
+    height: 70vh;
+    width: 45vw;
+  }
+  .card {
+    height: 12vh;
+    width: 8vw;
+    margin: 10px;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1520px) {
   .about-game,
   .about-form {
     height: 50vh;
