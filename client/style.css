@@ -167,31 +167,114 @@ p {
 
 /* Media query for screens smaller than 480px (smaller mobile phones) */
 
-.about-game,
-.about-form {
-  background-color: hsla(78, 71%, 76%, 1);
-  width: 15vw;
-  padding: 5vh 3vw;
+@media (max-width: 400px) {
+  .grid-container {
+    width: 100px;
+    max-width: none;
+    height: auto;
+    justify-content: center;
+  }
+
+  .card {
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+  }
+  body {
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .about-sections {
+    width: 80vw;
+  }
+  .aboutgame,
+  .about-form {
+    width: 80vw;
+    padding: 5vh 3vw;
+  }
 }
 
-/* TEXT */
+@media (max-width: 400px) {
+  .body {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100vh;
 
-h1,
-h2,
-h3 {
-  text-align: center;
-}
 
-h1,
-h3 {
-  font-size: 40px;
-  margin-bottom: 3vh;
-}
+    .about-sections {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+    }
 
-h2 {
-  font-size: 24px;
-  margin-bottom: 3vh;
-}
+    .about-game,
+    .about-form {
+      background-color: hsla(78, 71%, 76%, 1);
+      width: 15vw;
+      padding: 5vh 3vw;
+    }
+
+    /* TEXT */
+
+    h1,
+    h2,
+    h3 {
+      text-align: center;
+    }
+
+    h1,
+    h3 {
+      font-size: 40px;
+      margin-bottom: 3vh;
+    }
+
+
+    h2 {
+      font-size: 24px;
+      margin-bottom: 3vh;
+    }
+
+    p {
+      font-size: 24px;
+      padding: 6px 10px;
+      margin: 5px 0px;
+      text-align: center;
+    }
+
+    .game-container p {
+      background-color: white;
+    }
+
+    /* MEMORY GAME */
+
+    .game-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+    }
+
+    .grid-container {
+      display: flex;
+      height: 80vh;
+      width: 40vw;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* CARDS */
+
+    .card {
+      height: 16vh;
+      width: 8vw;
+      margin: 10px;
+      position: relative;
+      transform-style: preserve-3d;
+      transition: all 0.5s ease-in-out;
+      border: 2px solid white;
+    }
 
 p {
   font-size: 24px;
@@ -240,14 +323,34 @@ p {
   cursor: pointer;
 }
 
-.card.flipped {
-  transform: rotateY(180deg);
-}
 
-.front-image {
-  width: 100%;
-  height: 100%;
-}
+    .card:hover {
+      cursor: pointer;
+    }
+
+    .card.flipped {
+      transform: rotateY(180deg);
+    }
+
+
+    .front-image {
+      width: 100%;
+      height: 100%;
+    }
+
+    .front,
+    .back {
+      backface-visibility: hidden;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+    }
+
+    .card .front {
+      transform: rotateY(180deg);
+    }
 
 .front,
 .back {
@@ -271,26 +374,53 @@ p {
   backface-visibility: hidden;
 }
 
-/* RESTART BUTTON */
 
-#restart-button,
-#submit-button {
-  padding: 10px 15px;
-  background-color: white;
-  border: none;
-  margin-top: 5px;
-  border: 2px solid black;
-}
+    .card .back {
+      background-image: url(./assets/ronaldo.webp);
+      background-position: center;
+      background-size: cover;
+      backface-visibility: hidden;
+    }
 
-#restart-button:hover,
-#submit-button:hover {
-  cursor: pointer;
-}
+    /* RESTART BUTTON */
 
-#restart-button:active,
-#submit-button:active {
-  transform: translateY(5px);
-}
+    #restart-button,
+    #submit-button {
+      padding: 10px 15px;
+      background-color: white;
+      border: none;
+      margin-top: 5px;
+      border: 2px solid black;
+    }
+
+    #restart-button:hover,
+    #submit-button:hover {
+      cursor: pointer;
+    }
+
+    #restart-button:active,
+    #submit-button:active {
+      transform: translateY(5px);
+    }
+
+    /* FORM */
+
+    #gameForm {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 20px;
+    }
+
+    /* SUBMISSIONS */
+
+    .submissions {
+      background-color: white;
+      margin-top: 20px;
+    }
+
+    #username {
+      padding-left: 10px;
+    }
 
 /* FORM */
 @media (max-width: 600px) {
@@ -309,5 +439,6 @@ p {
 
   #username {
     padding-left: 10px;
+
   }
 }
