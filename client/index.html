@@ -6,28 +6,17 @@
     <meta name="description" content="memory game" />
     <script src="./app.js" defer type="module"></script>
     <link rel="stylesheet" href="./style.css" />
-    <title>Memory Game</title>
+    <title>CR7 MEMORY</title>
+    <link rel="icon" href="./assets/tile.png" />
   </head>
   <body>
-    <div class="hero">
       <div class="about-sections">
     <section class="about-game">
-      <h1>Memory Game</h1>
+      <h1>CR7 MEMORY</h1>
       <h2>How to Play</h2>
-      <ol>
-        <li>Match all pairs of cards on the board.</li>
-        <li>Click on two cards to reveal what's underneath. If they match, they stay face-up. If not, they flip back over.</li>
-        <li>Remember: Concentrate and remember the positions of the cards to make successful matches.</li>
-      </ol>
-    </section>
-    
-    <section class="about-form">
-      <h3>Share your Score</h3>
-      <form id="gameForm">
-        <input type="text" id="username" placeholder="username" />
-        <button id="submit-button">Submit</button>
-      </form>
-      <ul id="messageList"></ul>
+        <p>Match all pairs of cards on the board.</p>
+        <p>Click on two cards to reveal what's underneath. If they match, they stay face-up. If not, they flip back over.</p>
+        <p>Remember: Concentrate and remember the positions of the cards to make successful matches.</p>
     </section>
   </div>
 
@@ -38,6 +27,20 @@
         <button id="restart-button">Restart</button>
       </div>
     </div>
-  </div>
+
+    <section class="about-turns">
+      <div class="about-form">
+      <h3>Share your Score</h3>
+      <p>Submit your username to share your score!</p>
+      <p>The lower the score the better! Can you win the game in only 8 turns?</p>
+      <form id="gameForm">
+        <input type="text" id="username" placeholder="username" required/>
+        <button id="submit-button">Submit</button>
+      </form>
+    </div>
+      <div class="submissions">
+      <ul id="messageList"></ul>
+    </div>
+    </section>
   </body>
 </html>

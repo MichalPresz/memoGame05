@@ -1,25 +1,22 @@
 * {
   padding: 0px;
   margin: 0px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
 
 body {
-  height: 100vh;
-  width: 100vw;
-  background-image: url(https://images.pexels.com/photos/1542495/pexels-photo-1542495.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2git);
-  background-size: cover;
-}
-
-.hero {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  width: 100vw;
   height: 100vh;
+  background-image: url(./assets/rainbow-background.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
+/* ABOUT */
+
 .about-sections {
-  height: 50vh;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -27,36 +24,42 @@ body {
 
 .about-game,
 .about-form {
-  background-color: lightblue;
-  height: 50vh;
+  background-color: hsla(78, 71%, 76%, 1);
   width: 15vw;
   padding: 5vh 3vw;
 }
 
-.about-form {
-  height: 25vh;
-}
+/* TEXT */
 
-.about-game h1,
+h1,
 h2,
 h3 {
-  text-wrap: balance;
+  text-align: center;
 }
 
-.about-game h1,
+h1,
 h3 {
-  font-size: 48px;
+  font-size: 40px;
   margin-bottom: 3vh;
 }
 
-.about-game h2 {
-  font-size: 32px;
-  margin-bottom: 3vh;
-}
-
-.about-game ol {
+h2 {
   font-size: 24px;
+  margin-bottom: 3vh;
 }
+
+p {
+  font-size: 24px;
+  padding: 6px 10px;
+  margin: 5px 0px;
+  text-align: center;
+}
+
+.game-container p {
+  background-color: white;
+}
+
+/* MEMORY GAME */
 
 .game-container {
   display: flex;
@@ -65,40 +68,25 @@ h3 {
   align-items: center;
 }
 
-p {
-  font-size: 24px;
-}
-
-.actions button {
-  padding: 10px 15px;
-  font-size: 24px;
-  background-color: white;
-}
-
-.actions button:hover {
-  cursor: pointer;
-}
-
-.actions button:active {
-  transform: translateY(5px);
-}
-
 .grid-container {
   display: flex;
   height: 80vh;
-  width: 50vw;
+  width: 40vw;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
 }
 
+/* CARDS */
+
 .card {
-  height: 18vh;
-  width: 10vw;
+  height: 16vh;
+  width: 8vw;
   margin: 10px;
   position: relative;
   transform-style: preserve-3d;
   transition: all 0.5s ease-in-out;
+  border: 2px solid white;
 }
 
 .card:hover {
@@ -125,25 +113,66 @@ p {
 }
 
 .card .front {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   transform: rotateY(180deg);
 }
 
 .card .back {
-  background-image: url("https://img.a.transfermarkt.technology/portrait/big/8198-1694609670.jpg?lm=1");
+  background-image: url(./assets/ronaldo.webp);
   background-position: center;
   background-size: cover;
   backface-visibility: hidden;
 }
-@media (max-width: 600px){
-.grid-container {
-  width: 50px;
-  max-width: 200px;
-  height: auto;
+
+/* RESTART BUTTON */
+
+#restart-button,
+#submit-button {
+  padding: 10px 15px;
+  background-color: white;
+  border: none;
+  margin-top: 5px;
+  border: 2px solid black;
 }
-}@media (max-width: 768px) {
+
+#restart-button:hover,
+#submit-button:hover {
+  cursor: pointer;
+}
+
+#restart-button:active,
+#submit-button:active {
+  transform: translateY(5px);
+}
+
+/* FORM */
+
+#gameForm {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+/* SUBMISSIONS */
+
+.submissions {
+  background-color: white;
+  margin-top: 20px;
+}
+
+#username {
+  padding-left: 10px;
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 600px) {
+  .grid-container {
+    width: 50px;
+    max-width: 200px;
+    height: auto;
+  }
+}
+@media (max-width: 768px) {
   .grid-container {
     grid-template-columns: repeat(2, 1fr);
   }
