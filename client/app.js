@@ -107,13 +107,16 @@ function shuffleCards() {
   }
 }
 
-//GENERATE CARDS FUNCTION
+//GENERATE CARDS FUNCTION / aria
 
 function generateCards() {
   for (let card of cards) {
     const cardElement = document.createElement("div");
     cardElement.classList.add("card");
     cardElement.setAttribute("data-name", card.name);
+    cardElement.setAttribute("role", "button");
+    cardElement.setAttribute("aria-label", "unflipped card");
+    cardElement.tabIndex = 0;
     cardElement.innerHTML = `
     <div class="front">
       <img class="front-image" src=${card.image} alt="Cristiano Ronaldo"/>
