@@ -9,67 +9,67 @@ let turns = 0;
 
 cards = [
   {
-    image: "./assets/cat1.avif",
+    image: "./assets/cat1.webp",
     name: "cat",
   },
   {
-    image: "./assets/cat2.avif",
+    image: "./assets/cat2.webp",
     name: "cat2",
   },
   {
-    image: "./assets/cat3.avif",
+    image: "./assets/cat3.webp",
     name: "cat3",
   },
   {
-    image: "./assets/cat4.avif",
+    image: "./assets/cat4.webp",
     name: "cat4",
   },
   {
-    image: "./assets/cat5.avif",
+    image: "./assets/cat5.webp",
     name: "cat5",
   },
   {
-    image: "./assets/cat6.avif",
+    image: "./assets/cat6.webp",
     name: "cat6",
   },
   {
-    image: "./assets/cat7.avif",
+    image: "./assets/cat7.webp",
     name: "cat7",
   },
   {
-    image: "./assets/cat8.avif",
+    image: "./assets/cat8.webp",
     name: "cat8",
   },
   {
-    image: "./assets/cat1.avif",
+    image: "./assets/cat1.webp",
     name: "cat",
   },
   {
-    image: "./assets/cat2.avif",
+    image: "./assets/cat2.webp",
     name: "cat2",
   },
   {
-    image: "./assets/cat3.avif",
+    image: "./assets/cat3.webp",
     name: "cat3",
   },
   {
-    image: "./assets/cat4.avif",
+    image: "./assets/cat4.webp",
     name: "cat4",
   },
   {
-    image: "./assets/cat5.avif",
+    image: "./assets/cat5.webp",
     name: "cat5",
   },
   {
-    image: "./assets/cat6.avif",
+    image: "./assets/cat6.webp",
     name: "cat6",
   },
   {
-    image: "./assets/cat7.avif",
+    image: "./assets/cat7.webp",
     name: "cat7",
   },
   {
-    image: "./assets/cat8.avif",
+    image: "./assets/cat8.webp",
     name: "cat8",
   },
 ];
