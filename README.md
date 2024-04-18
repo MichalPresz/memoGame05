@@ -1,5 +1,8 @@
 # CR7 Memory Game
 
+Links: https://memogame05-1.onrender.com/ (live)
+https://memogame05.onrender.com/ (server)
+
 Welcome to CR7 Memory Game, a creative project designed and developed by Michal, Nik, and Lucy!
 
 ## Overview
