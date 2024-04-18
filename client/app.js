@@ -205,6 +205,13 @@ generateCards();
 async function handleSubmit(event) {
   event.preventDefault();
   const username = event.target.username.value;
+  const errorMessage = document.getElementById("error-message");
+  if (username === "") {
+    errorMessage.textContent = "please enter a username";
+    return;
+  }
+  errorMessage.textContent = "";
+
   console.log(`username:${username}, turns:${turns}`);
   await fetch("https://memogame05.onrender.com/", {
     method: "POST",
